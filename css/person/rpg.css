@@ -52,68 +52,67 @@ nav ul li a:hover {
 }
 
 /*=====Main=====*/
-
-main {
-  padding-bottom: 60px;
-}
-
-.person-heading {
-  font-size: 2.2rem;
+.page-title {
+  font-size: 2rem;
   text-align: center;
-  margin: 50px 0 20px;
-  color: #ffdd59;
+  margin: 40px 0 30px;
+  color: #b96bff; /* RPGは紫系 */
   font-weight: bold;
 }
 
-.person-subheading {
-  text-align: center;
+.player-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 90%;
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.player-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #3a3a3a;
+  padding: 15px 20px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+}
+
+.player-icon {
+  width: 70px;
+  height: 70px;
+  border-radius: 12px; /* 角丸四角 */
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.player-info {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.player-name {
+  font-size: 1.3rem;
+  margin-bottom: 6px;
+  color: #fff;
+  font-weight: bold;
+}
+
+.player-desc {
   font-size: 0.95rem;
   color: #ddd;
-  margin-bottom: 40px;
 }
 
-.category-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 25px;
-  width: 80%;
-  margin: 0 auto;
+.player-links {
+  display: flex;
+  gap: 10px;
 }
 
-.category-box {
-  display: block;
-  text-decoration: none;
-  padding: 25px 20px;
-  background-color: #3a3a3a;
-  border-radius: 15px;
-  text-align: center;
-  color: #fff;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.5);
-  transition: transform 0.3s, background-color 0.3s;
-}
-
-.category-box h2 {
+.yt-link {
+  color: #ff4747;
   font-size: 1.6rem;
-  margin-bottom: 10px;
-  font-weight: bold;
 }
-
-.category-box p {
-  font-size: 0.95rem;
-  color: #ccc;
-}
-
-/* ホバー効果 */
-.category-box:hover {
-  transform: translateY(-5px);
-  background-color: #505050;
-}
-
-/* カテゴリ別色 */
-.category-box.pvp h2 { color: #ff4747; }
-.category-box.shop h2 { color: #ffdd59; }
-.category-box.minigame h2 { color: #59aaff; }
-.category-box.rpg h2 { color: #59ff8e; }
 
 /*=====footer=====*/
 footer {
@@ -183,6 +182,30 @@ footer {
   }
   nav ul {
     gap: 10px;
+  }
+}
+
+@media (max-width: 600px) {
+  .player-box {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .player-icon {
+    margin: 0 0 10px 0;
+  }
+
+  .player-info {
+    margin: 0 0 10px 0;
+  }
+
+  .player-links {
+    align-self: center;
+  }
+
+  .yt-link {
+    font-size: 1.2rem;
   }
 }
 
